@@ -1,6 +1,6 @@
 package com.lazzycodder.api.helloworldapp;
 
-import static org.mockito.ArgumentMatchers.eq;
+import static org.hamcrest.Matchers.equalTo;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 
@@ -25,7 +25,7 @@ class HelloworldApplicationTests {
 	public void getHello() throws Exception {
 		mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.APPLICATION_JSON))
 		.andExpect(status().isOk())
-		.andExpect(content().string(eq("Hello World Greeting!")));
+		.andExpect(content().string(equalTo("Hello World Greeting!!")));
 	}
 
 }
