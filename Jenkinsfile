@@ -7,10 +7,16 @@ pipeline{
             }
         }
         stage('Test'){
-            echo 'This is Test stage'
+            steps{
+                echo 'This is Test stage'
+            }
+            
         }
-        satage('Deploy'){
-            echo 'deploy stage!!'
+        stage('Deploy'){
+            steps{
+                echo 'deploy stage!!'
+            }
+            
         }
     }
 }
